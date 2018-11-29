@@ -1,6 +1,6 @@
 const dgram = require('dgram');
 
-const {Commands} = require('./constants');
+const { Commands } = require('./constants');
 
 module.exports = class {
   /**

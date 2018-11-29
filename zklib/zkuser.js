@@ -1,7 +1,7 @@
 const dgram = require('dgram');
 
-const {Commands, States, ConnectionTypes} = require('./constants');
-const {createHeader, checkValid, removeTcpHeader} = require('./utils');
+const { Commands, States, ConnectionTypes } = require('./constants');
+const { createHeader, checkValid, removeTcpHeader } = require('./utils');
 
 // /**
 //  *
@@ -144,7 +144,8 @@ class ZkUser {
 
           if (reply && reply.length) {
             // total_bytes = getSizeUser(reply);
-            total_bytes = reply.readUInt32LE(8);
+            //total_bytes = reply.readUInt32LE(8);
+            total_bytes = reply[8];
 
             if (total_bytes <= 0) {
               internalCallback(new Error('no data'));
