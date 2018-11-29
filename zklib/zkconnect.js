@@ -4,7 +4,7 @@ const {Commands} = require('./constants');
 
 module.exports = class {
   /**
-   * Comment
+   * Comment 2
    * @param {(error?: Error) => void} [cb]
    */
   connect(cb) {
